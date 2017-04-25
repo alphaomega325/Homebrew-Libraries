@@ -1,0 +1,15 @@
+package SortingAlgorithms;
+
+/**
+ * Homebrew Sorting Algorithms tester
+ * @author alphaomega325, David Wright
+ * @version .01
+ * @since 12-08-16
+ */
+    
+    public interface SortInterface {
+
+    public int[] sort(int[] array);
+
+}
+	

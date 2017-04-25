@@ -1,0 +1,51 @@
+import SortingAlgorithms.*;
+
+import java.util.Random;
+
+/**
+ * Stress tester for the algorithms to see how long it will take before they break.
+ * @author alphaomega325
+ * @version .01
+ * @since 12-22-16
+ */
+
+public class StressTest {
+
+    public static void main(String[] args)
+    {
+
+	SortInterface sort = QuickSort();
+	boolean iscorrect = true;
+	Random rand = new Random();
+	int[] array;
+	int size = 0;
+
+	try{
+	    while(iscorrect)
+		{
+		    for(int i = 0; i < size; i++)
+			array[i] = rand.nextInt();
+
+		    array = sort.sort(array);
+		    iscorrect = checker(array);
+		}
+
+	}
+
+    }
+
+    public boolean checker(int[] array)
+    {
+
+	for(int j = 0; j < array.size; j++)
+	    {
+		if(array[j] > array[j+1])
+		    return false;
+	    }
+	return true;
+	    
+
+    }
+
+    
+	
